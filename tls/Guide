@@ -1,0 +1,5 @@
+mvn archetype:generate -DarchetypeArtifactId=maven-archetype-archetype -DgroupId=garcia -DartifactId=tls -DinteractiveMode=false
+
+keytool -genkey -alias sbtls -keystore sbtlskeystore.jks -keyalg RSA -sigalg SHA1withRSA
+*keystore & alias password is the same @ sbtls123
+keytool -export -alias sbtls -file sbtls.cer -keystore sbtlskeysotre.jks
